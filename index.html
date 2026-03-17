@@ -209,6 +209,84 @@
       </div>
     </section>
 
+    <section class="steps-section" id="steps" style="padding: 100px 0; background: #fff;">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Flow</p>
+          <h2 class="section-title">お申し込みから公開まで、<br>たったの3ステップ！</h2>
+        </div>
+        
+        <div class="reasons-grid">
+          <div class="reason-card">
+            <div class="reason-num">1</div>
+            <h3 class="reason-title">LINE登録 &<br>ヒアリングシート入力</h3>
+            <p class="reason-body">公式LINEを友達追加。自動で送られるフォームにスマホからポチポチ入力するだけ！</p>
+          </div>
+          <div class="reason-card">
+            <div class="reason-num">2</div>
+            <h3 class="reason-title">初期費用・月額の<br>オンライン決済</h3>
+            <p class="reason-body">安全なクレジットカード決済（Square）のリンクをお送りします。スマホから1分で完了！</p>
+          </div>
+          <div class="reason-card">
+            <div class="reason-num">3</div>
+            <h3 class="reason-title">制作スタート ➔<br>最短3日で納品！</h3>
+            <p class="reason-body">素材が揃い次第、制作が爆速スタート。あっという間にあなただけのWebサイトが完成！</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq" style="padding: 100px 0; background: #F8F9FA;">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">FAQ</p>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+        
+        <div class="faq-list" style="max-width: 800px; margin: 40px auto 0;">
+          <div class="faq-item" style="background: #fff; margin-bottom: 16px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="faq-q" style="padding: 24px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee;">
+              本当に3日で完成するんですか？
+              <span style="color: #1B5EBE; font-size: 20px;">+</span>
+            </div>
+            <div class="faq-a" style="padding: 24px; color: #666; line-height: 1.8; display: none;">
+              はい！ヒアリングシートの回答と、サイトに掲載する写真・ロゴ素材がすべて揃い、初期決済が完了した翌営業日から起算して「最短3営業日」で初稿を提出いたします。
+            </div>
+          </div>
+
+          <div class="faq-item" style="background: #fff; margin-bottom: 16px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="faq-q" style="padding: 24px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee;">
+              載せる写真が全然ないのですが…
+              <span style="color: #1B5EBE; font-size: 20px;">+</span>
+            </div>
+            <div class="faq-a" style="padding: 24px; color: #666; line-height: 1.8; display: none;">
+              ご安心ください。ご用意が難しい場合は、弊社で高品質なフリー素材（イメージ画像）をご用意して美しく仕上げます。
+            </div>
+          </div>
+
+          <div class="faq-item" style="background: #fff; margin-bottom: 16px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="faq-q" style="padding: 24px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee;">
+              最低契約期間はありますか？
+              <span style="color: #1B5EBE; font-size: 20px;">+</span>
+            </div>
+            <div class="faq-a" style="padding: 24px; color: #666; line-height: 1.8; display: none;">
+              サイトの品質維持のため、最低利用期間を「1年間」とさせていただいております。以降は1ヶ月単位での自動更新となります。
+            </div>
+          </div>
+
+          <div class="faq-item" style="background: #fff; margin-bottom: 16px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+            <div class="faq-q" style="padding: 24px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee;">
+              補助金を使った本格的なサイト制作も相談できますか？
+              <span style="color: #1B5EBE; font-size: 20px;">+</span>
+            </div>
+            <div class="faq-a" style="padding: 24px; color: #666; line-height: 1.8; display: none;">
+              もちろんです！運営元の「Cignals」にて、補助金活用を前提とした本格的なクリエイティブ制作やSNS運用のプランもございます。LINEにてお気軽にご相談ください。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== SECTION 6: COMPANY ========== -->
     <section class="company" id="company">
       <div class="container">
@@ -284,6 +362,20 @@
         mobileNav.classList.remove('open');
       });
     });
+
+    // FAQのアコーディオン動作
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const answer = q.nextElementSibling;
+    const isVisible = answer.style.display === 'block';
+    
+    // 他のFAQを閉じる（お好みで）
+    document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'none');
+    
+    // クリックしたものを開閉
+    answer.style.display = isVisible ? 'none' : 'block';
+  });
+});
 
     // スクロールでヘッダーに影
     window.addEventListener('scroll', () => {
