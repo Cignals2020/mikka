@@ -23,4 +23,20 @@
       "description": "コーポレートサイトのWeb制作およびスチール撮影を担当。企業の持つ世界観を高品質なビジュアルとWebデザインで表現しました 。",
       "tags": ["Web制作", "スチール撮影"]
     }
+    {
+      "id": 4,
+      "client": "沖縄市コザパルミラ通り会",
+      "url": "https://www.kozayoichi.com/",
+      "image": "images/work-palmira.png",
+      "description": "沖縄市のパルミラ通りで開催される台湾夜市テイストの地域イベント。2026年も7月10日・11日の開催が決まっており、イベントサイトで出店情報・アクセス・スケジュールを一元発信しています。",
+      "tags": ["LP制作"]
+    }
+    {
+      "id": 5,
+      "client": "コザスタートアップ商店街",
+      "url": "https://roots-market.koza.rocks/",
+      "image": "images/work-rootsmarket.jpg",
+      "description": "沖縄市コザで開催されるマーケット。出店者募集・協賛募集・ワークショップ情報をホームページで完結できる設計し、KSAブランドの発信拠点として機能しています。",
+      "tags": ["LP制作"]
+    }
   ]
