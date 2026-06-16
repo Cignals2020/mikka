@@ -56,17 +56,25 @@
   /* ── お知らせ (news.json) ── */
   function renderNews(items) {
     const list = document.getElementById('newsList');
+    const newsSection = document.getElementById('news'); // 追加：セクション全体を取得
     if (!list) return;
+
+    // データが取得できたので、セクションの非表示(hidden)を解除する
+    if (newsSection && newsSection.hasAttribute('hidden')) {
+      newsSection.removeAttribute('hidden');
+    }
 
     if (!items || items.length === 0) {
       list.innerHTML = '<li class="news-item"><span class="news-content">現在お知らせはありません。</span></li>';
       return;
     }
 
+    // item.content ではなく、item.title と item.category を表示するように変更！
     const html = items.map((item, i) => `
       <li class="news-item" style="animation-delay: ${i * 0.08}s">
         <time class="news-date" datetime="${escapeHtml(item.date)}">${formatDate(item.date)}</time>
-        <span class="news-content">${escapeHtml(item.content)}</span>
+        <span class="news-category" style="margin: 0 12px; font-size: 0.85em; background: #eee; padding: 2px 8px; border-radius: 4px;">${escapeHtml(item.category || '')}</span>
+        <span class="news-content">${escapeHtml(item.title)}</span>
       </li>
     `).join('');
 
