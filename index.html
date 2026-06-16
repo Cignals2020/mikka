@@ -197,7 +197,7 @@
     </section>
 
     <!-- ========== SECTION: NEWS (CMS) ========== -->
-    <section class="news-section" id="news" hidden>
+    <section class="news-section" id="news">
       <div class="container">
         <div class="section-header">
           <p class="section-eyebrow">News</p>
@@ -208,6 +208,37 @@
         </ul>
       </div>
     </section>
+
+    <!-- ========== NEWS MODAL ========== -->
+    <div class="news-modal-overlay" id="newsModalOverlay" role="dialog" aria-modal="true" aria-labelledby="newsModalTitle">
+      <div class="news-modal">
+        <button class="news-modal-close" id="newsModalClose" aria-label="閉じる">&times;</button>
+        <div class="news-modal-inner">
+          <div class="news-modal-meta">
+            <span class="news-modal-category" id="newsModalCategory"></span>
+            <time class="news-modal-date" id="newsModalDate"></time>
+          </div>
+          <h2 class="news-modal-title" id="newsModalTitle"></h2>
+          <div class="news-modal-body" id="newsModalBody"></div>
+
+          <!-- LINE CTA -->
+          <div class="news-modal-cta">
+            <p class="news-modal-cta-text">ホームページのことで<br>お気軽にご相談ください！</p>
+            <a href="https://lin.ee/xjEVKKg" class="news-modal-cta-btn" target="_blank" rel="noopener">
+              &#x1F4AC; LINE無料相談はこちら
+            </a>
+            <p class="news-modal-cta-note">相談・見積もり完全無料。しつこい営業は一切ありません。</p>
+          </div>
+
+          <!-- 前後ナビ -->
+          <div class="news-modal-nav">
+            <button class="news-nav-btn" id="newsNavPrev" aria-label="前の記事">&#8592; 前の記事</button>
+            <span class="news-nav-count" id="newsNavCount"></span>
+            <button class="news-nav-btn" id="newsNavNext" aria-label="次の記事">次の記事 &#8594;</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ========== SECTION: WORKS (CMS) ========== -->
     <section class="works-section" id="works">
